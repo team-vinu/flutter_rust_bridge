@@ -53,7 +53,7 @@ impl IrTypeTrait for IrTypeOptional {
         self.inner.dart_wire_type()
     }
     fn dart_api_type(&self) -> String {
-        format!("{}?", self.inner.dart_api_type())
+        format!("fp.Option<{}>", self.inner.dart_api_type())
     }
     fn rust_wire_is_pointer(&self) -> bool {
         true
