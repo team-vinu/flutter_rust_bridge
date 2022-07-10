@@ -174,7 +174,7 @@ fn generate_common_header() -> DartBasicCode {
     DartBasicCode {
         import: "import 'dart:convert';
             import 'dart:typed_data';
-            import 'package:fpdart/fpdart.dart'"
+            import 'package:fpdart/fpdart.dart';"
             .to_string(),
         part: "".to_string(),
         body: "".to_string(),
