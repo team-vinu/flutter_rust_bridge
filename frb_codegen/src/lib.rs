@@ -130,10 +130,6 @@ pub fn frb_codegen(config: &config::Opts, all_symbols: &[String]) -> anyhow::Res
     } else {
         fs::write(
             &config.dart_output_path,
-            "import \"package:fpdart/fpdart.dart\"",
-        )?;
-        fs::write(
-            &config.dart_output_path,
             (&generated_dart.file_prelude + &generated_dart_decl_all + &generated_dart_impl_all)
                 .to_text(),
         )?;
