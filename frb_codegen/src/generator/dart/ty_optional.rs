@@ -25,7 +25,7 @@ impl TypeDartGeneratorTrait for TypeOptionalGenerator<'_> {
 
     fn wire2api_body(&self) -> String {
         format!(
-            "return raw == null ? null : _wire2api_{}(raw);",
+            "return raw == null ? fp.none() : _wire2api_{}(raw);",
             self.ir.inner.safe_ident()
         )
     }
