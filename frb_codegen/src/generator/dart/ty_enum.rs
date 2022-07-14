@@ -130,7 +130,7 @@ impl TypeDartGeneratorTrait for TypeEnumRefGenerator<'_> {
                             if let Some(idx) = split {
                                 let before = &types[..idx];
                                 let after = &types[idx..];
-                                format!("{}[{}]", before.join(""), after.join(""))
+                                format!("{}{}", before.join(""), after.join(""))
                             } else {
                                 types.join("")
                             }
