@@ -8,7 +8,10 @@ type_dart_generator_struct!(TypeOptionalGenerator, IrTypeOptional);
 impl TypeDartGeneratorTrait for TypeOptionalGenerator<'_> {
     fn api2wire_body(&self, _block_index: BlockIndex) -> Option<String> {
         Some(format!(
-            "return raw == null ? ffi.nullptr : _api2wire_{}(raw);",
+            "return raw.match(
+                (r) => _api2wire_{}(r),
+                () => ffi.nullptr,
+            );",
             self.ir.inner.safe_ident()
         ))
     }
@@ -25,7 +28,7 @@ impl TypeDartGeneratorTrait for TypeOptionalGenerator<'_> {
 
     fn wire2api_body(&self) -> String {
         format!(
-            "return raw == null ? fp.none() : _wire2api_{}(raw);",
+            "return raw == null ? fp.none() : fp.some(_wire2api_{}(raw));",
             self.ir.inner.safe_ident()
         )
     }

@@ -28,7 +28,7 @@ impl IrType {
     #[inline]
     pub fn dart_required_modifier(&self) -> &'static str {
         match self {
-            Optional(_) => "",
+            // Optional(_) => "",
             _ => "required ",
         }
     }
