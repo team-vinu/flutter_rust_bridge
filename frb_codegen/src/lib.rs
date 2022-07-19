@@ -1,3 +1,5 @@
+//! Main documentation is in https://github.com/fzyzcjy/flutter_rust_bridge
+
 use std::fs;
 use std::path::Path;
 
@@ -21,6 +23,7 @@ mod error;
 mod generator;
 mod ir;
 mod markers;
+mod method_utils;
 mod others;
 mod parser;
 mod source_graph;

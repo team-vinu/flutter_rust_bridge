@@ -246,7 +246,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/6632321?v=4",
       "profile": "https://github.com/lattice0",
       "contributions": [
-        "code"
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "juzi5201314",
+      "name": "orange soeur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26034975?v=4",
+      "profile": "https://soeur.dev",
+      "contributions": [
+        "doc"
       ]
     }
   ],
